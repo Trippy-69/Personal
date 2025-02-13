@@ -31,7 +31,7 @@ function App() {
     "Khushboo, you're simply the best! 🏆",
     "Khushboo, you have a different positivity within you! 🌈",
     "Khushboo, you carry a different aura!",
-    "Khushboo, tum dil ki bohot saaf ho pta h :) 💛",
+    "Yaar, tum dil ki bohot saaf ho :) 💛",
     "Khushboo, chalti firti cocaine💎",
     "Khushboo, you're one of a kind! 🌟",
     "Khushboo, your beauty is unmatched! 🌸",
@@ -135,7 +135,7 @@ function App() {
       {/* Thank You Message */}
       {thankYouMessage && (
         <div className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-white p-4 rounded-lg shadow-lg z-20">
-          <p className="text-pink-600 text-xl font-bold">Thanks for forgiving me! 💖</p>
+          <p className="text-pink-600 text-xl font-bold">Smileee! 💖</p>
         </div>
       )}
 
