@@ -149,7 +149,7 @@ function App() {
 
       {/* Main Content */}
       <div className="bg-white p-6 sm:p-10 rounded-3xl shadow-2xl max-w-xs sm:max-w-md relative z-10 border-4 border-pink-500 transform transition-all hover:scale-105 hover:shadow-pink-600 text-center flex flex-col items-center" style={{ fontFamily: 'Times New Roman, serif' }}>
-        <h1 className="text-3xl sm:text-5xl text-pink-600 font-bold leading-tight">Thanks for understanding me, <br /> Khushboo! 💖</h1>
+        <h1 className="text-3xl sm:text-5xl text-pink-600 font-bold leading-tight">Thanks for understanding me,<br /> Kuchi! 💖</h1>
         <p className="text-gray-700 mt-4 text-lg sm:text-xl text-center">
           I love you my baby girl🥺
         </p>
