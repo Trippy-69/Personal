@@ -13,6 +13,7 @@ function App() {
   const compliments = [
     "Khushboo, tmpe cat eye frame bohot suit krta h! 💖",
     "Khushboo, tmhara smile ispe kon naa fida ho! 🌟",
+    "Khushboo, i need Vitamin K",
     "Khushboo, you're incredibly jhakass! 🌸",
     "Khushboo, buddhu! 🍀",
     "Khushboo, tum kitni pyari ho andaza h?",
@@ -94,7 +95,7 @@ function App() {
         <Confetti
           width={window.innerWidth}
           height={window.innerHeight}
-          numberOfPieces={300} // Increased confetti pieces
+          numberOfPieces={400} // Increased confetti pieces
           recycle={false}
         />
       )}
