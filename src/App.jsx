@@ -53,7 +53,7 @@ function App() {
     setTimeout(() => {
       setShowCelebration(false);
       setThankYouMessage(false);
-    }, 4000);
+    }, 5000);
   };
 
   const handleComplimentClick = () => {
@@ -73,7 +73,7 @@ function App() {
     setTimeout(() => {
       setHugMessage(false);
       setShowHearts(false);
-    }, 3000);
+    }, 4000);
   };
 
   const handleLetsTalkClick = () => {
