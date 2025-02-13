@@ -135,7 +135,7 @@ function App() {
       {/* Thank You Message */}
       {thankYouMessage && (
         <div className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-white p-4 rounded-lg shadow-lg z-20">
-          <p className="text-pink-600 text-xl font-bold">Smileee! 💖</p>
+          <p className="text-pink-600 text-xl font-bold">Smileee💖</p>
         </div>
       )}
 
