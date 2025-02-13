@@ -8,12 +8,13 @@ function App() {
   const [hugMessage, setHugMessage] = useState(false);
   const [showHearts, setShowHearts] = useState(false);
   const audioRef = useRef(null);
+  const timeoutRef = useRef(null); // Ref to store the timeout ID
 
   // Custom list of English compliments focused on Khushboo
   const compliments = [
     "Khushboo, tmpe cat eye frame bohot suit krta h! 💖",
     "Khushboo, tmhara smile ispe kon naa fida ho! 🌟",
-    "Khushboo, i need Vitamin K",
+    "Khushboo, you're my Vitamin K",
     "Khushboo, you're incredibly jhakass! 🌸",
     "Khushboo, tmhara baat bhi utna special hai jitni ki tum khud!🌟",
     "Khushboo, buddhu! 🍀",
@@ -29,12 +30,12 @@ function App() {
     "Khushboo, tumari baatein itni sweet h ki chocolate apna job chhod de! 💘",
     "Khushboo, you're simply the best! 🏆",
     "Khushboo, you have a different positivity within you! 🌈",
-    "Khushboo,you carry a different aura!",
+    "Khushboo, you carry a different aura!",
     "Khushboo, tum dil ki bohot saaf ho pta h :) 💛",
     "Khushboo, chalti firti cocaine💎",
     "Khushboo, you're one of a kind! 🌟",
     "Khushboo, your beauty is unmatched! 🌸",
-    "Khushboo, you're the best as i always say! 🌹",
+    "Khushboo, you're the best as I always say! 🌹",
     "Khushboo, tum ek poem ho jo bina likhe bhi bohot kuch keh jati ho! ✨",
     "Khushboo, your eyes are like gehra samandar! (dub jau?) 👀",
   ];
@@ -49,7 +50,7 @@ function App() {
       audioRef.current.play();
     }
 
-    // Reset everything after 4 seconds
+    // Reset everything after 5 seconds
     setTimeout(() => {
       setShowCelebration(false);
       setThankYouMessage(false);
@@ -57,19 +58,24 @@ function App() {
   };
 
   const handleComplimentClick = () => {
+    // Clear the previous timeout if it exists
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+
     // Pick a random compliment from the list
     const randomCompliment = compliments[Math.floor(Math.random() * compliments.length)];
     setCompliment(randomCompliment);
 
-    // Clear the compliment after 3 seconds
-    setTimeout(() => setCompliment(""), 6000);
+    // Set a new timeout to clear the compliment after 6 seconds
+    timeoutRef.current = setTimeout(() => setCompliment(""), 4000);
   };
 
   const handleHugClick = () => {
     setHugMessage(true);
     setShowHearts(true);
 
-    // Clear the hug message and hearts after 3 seconds
+    // Clear the hug message and hearts after 4 seconds
     setTimeout(() => {
       setHugMessage(false);
       setShowHearts(false);
