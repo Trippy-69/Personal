@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Confetti from 'react-confetti';
 
 function App() {
@@ -7,18 +7,20 @@ function App() {
   const [compliment, setCompliment] = useState("");
   const [hugMessage, setHugMessage] = useState(false);
   const [showHearts, setShowHearts] = useState(false);
+  const [timeSince, setTimeSince] = useState("");
   const audioRef = useRef(null);
+  const timeoutRef = useRef(null); // Ref to store the timeout ID
 
   // Custom list of English compliments focused on Khushboo
   const compliments = [
     "Khushboo, tmpe cat eye frame bohot suit krta h! 💖",
     "Khushboo, tmhara smile ispe kon naa fida ho! 🌟",
-    "Khushboo, i need Vitamin K",
+    "Khushboo, you're my Vitamin K",
     "Khushboo, you're incredibly jhakass! 🌸",
-    "Khushboo, tmhara baat bhi utna specail hai jitni ki tum khud!🌟",
+    "Khushboo, tmhara baat bhi utna special hai jitni ki tum khud!🌟",
     "Khushboo, buddhu! 🍀",
     "Hor das kinniya tareefan chaidiya tenu 👀",
-    "",
+    "You're the one, you're the only one!",
     "Khushboo, tum kitni pyari ho andaza h?",
     "Khushboo, you're beautiful inside and out! 🌹",
     "Khushboo, tmpe bun bohot suit kta hai! ✨",
@@ -29,15 +31,34 @@ function App() {
     "Khushboo, tumari baatein itni sweet h ki chocolate apna job chhod de! 💘",
     "Khushboo, you're simply the best! 🏆",
     "Khushboo, you have a different positivity within you! 🌈",
-    "Khushboo,you carry a different aura!",
-    "Khushboo, tum dil ki bohot saaf ho pta h :) 💛",
+    "Khushboo, you carry a different aura!",
+    "Yaar, tum dil ki bohot saaf ho :) 💛",
     "Khushboo, chalti firti cocaine💎",
     "Khushboo, you're one of a kind! 🌟",
     "Khushboo, your beauty is unmatched! 🌸",
-    "Khushboo, you're the best as i always say! 🌹",
+    "Khushboo, you're the best as I always say! 🌹",
     "Khushboo, tum ek poem ho jo bina likhe bhi bohot kuch keh jati ho! ✨",
     "Khushboo, your eyes are like gehra samandar! (dub jau?) 👀",
   ];
+
+  useEffect(() => {
+    const startDate = new Date("2002-01-10");
+    const interval = setInterval(() => {
+      const now = new Date();
+      const diff = now - startDate;
+
+      const seconds = Math.floor((diff / 1000) % 60);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const years = Math.floor(days / 365);
+      const months = Math.floor((days % 365) / 30);
+
+      setTimeSince(`${years} years, ${months} months, ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   const handleForgiveClick = () => {
     setShowCelebration(true);
@@ -49,31 +70,36 @@ function App() {
       audioRef.current.play();
     }
 
-    // Reset everything after 4 seconds
+    // Reset everything after 5 seconds
     setTimeout(() => {
       setShowCelebration(false);
       setThankYouMessage(false);
-    }, 4000);
+    }, 5000);
   };
 
   const handleComplimentClick = () => {
+    // Clear the previous timeout if it exists
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+
     // Pick a random compliment from the list
     const randomCompliment = compliments[Math.floor(Math.random() * compliments.length)];
     setCompliment(randomCompliment);
 
-    // Clear the compliment after 3 seconds
-    setTimeout(() => setCompliment(""), 4000);
+    // Set a new timeout to clear the compliment after 6 seconds
+    timeoutRef.current = setTimeout(() => setCompliment(""), 4000);
   };
 
   const handleHugClick = () => {
     setHugMessage(true);
     setShowHearts(true);
 
-    // Clear the hug message and hearts after 3 seconds
+    // Clear the hug message and hearts after 4 seconds
     setTimeout(() => {
       setHugMessage(false);
       setShowHearts(false);
-    }, 3000);
+    }, 4000);
   };
 
   const handleLetsTalkClick = () => {
@@ -129,7 +155,7 @@ function App() {
       {/* Thank You Message */}
       {thankYouMessage && (
         <div className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-white p-4 rounded-lg shadow-lg z-20">
-          <p className="text-pink-600 text-xl font-bold">Thanks for forgiving me! 💖</p>
+          <p className="text-pink-600 text-xl font-bold">Smileee💖</p>
         </div>
       )}
 
@@ -149,13 +175,13 @@ function App() {
 
       {/* Main Content */}
       <div className="bg-white p-6 sm:p-10 rounded-3xl shadow-2xl max-w-xs sm:max-w-md relative z-10 border-4 border-pink-500 transform transition-all hover:scale-105 hover:shadow-pink-600 text-center flex flex-col items-center" style={{ fontFamily: 'Times New Roman, serif' }}>
-        <h1 className="text-3xl sm:text-5xl text-pink-600 font-bold leading-tight">I'm Really Sorry, <br /> Khushboo! 💖</h1>
+        <h1 className="text-3xl sm:text-5xl text-pink-600 font-bold leading-tight">Thanks for understanding me, Kuchi! 💖</h1>
         <p className="text-gray-700 mt-4 text-lg sm:text-xl text-center">
-          I should have not behaved like that...You are really special to me, and I feel bad for my behavior..I know tum maaf kr dogi mereko😞
+          I love you my baby girl🥺
         </p>
         <div className="mt-6 space-y-4 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row items-center justify-center w-full">
           <button onClick={handleForgiveClick} className="bg-[#FBAED2] text-white px-6 py-2 rounded-full shadow-md hover:bg-[#F98FB8] transition transform hover:scale-105 w-full sm:w-auto">
-            Forgive Me? 🥺
+            Celebrate 🎉
           </button>
           <button onClick={handleAgreementClick} className="bg-[#FBAED2] text-white px-6 py-2 rounded-full shadow-md hover:bg-[#F98FB8] transition transform hover:scale-105 w-full sm:w-auto">
             Forgiveness Agreement 📜
@@ -171,6 +197,12 @@ function App() {
           </button>
         </div>
       </div>
+
+      {/* Footer */}
+      <footer className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white">
+        <p className="text-sm">Made with ♥️ by Preet</p>
+        <p className="text-sm">Yours since {timeSince}</p>
+      </footer>
 
       {/* Keyframes for animations */}
       <style>
