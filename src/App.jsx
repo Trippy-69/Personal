@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Confetti from 'react-confetti';
 
 function App() {
@@ -7,6 +7,7 @@ function App() {
   const [compliment, setCompliment] = useState("");
   const [hugMessage, setHugMessage] = useState(false);
   const [showHearts, setShowHearts] = useState(false);
+  const [timeSince, setTimeSince] = useState("");
   const audioRef = useRef(null);
   const timeoutRef = useRef(null); // Ref to store the timeout ID
 
@@ -39,6 +40,25 @@ function App() {
     "Khushboo, tum ek poem ho jo bina likhe bhi bohot kuch keh jati ho! ✨",
     "Khushboo, your eyes are like gehra samandar! (dub jau?) 👀",
   ];
+
+  useEffect(() => {
+    const startDate = new Date("2002-01-10");
+    const interval = setInterval(() => {
+      const now = new Date();
+      const diff = now - startDate;
+
+      const seconds = Math.floor((diff / 1000) % 60);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const years = Math.floor(days / 365);
+      const months = Math.floor((days % 365) / 30);
+
+      setTimeSince(`${years} years, ${months} months, ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   const handleForgiveClick = () => {
     setShowCelebration(true);
@@ -177,6 +197,12 @@ function App() {
           </button>
         </div>
       </div>
+
+      {/* Footer */}
+      <footer className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white">
+        <p className="text-sm">Made with ♥️ by Preet</p>
+        <p className="text-sm">Yours since {timeSince}</p>
+      </footer>
 
       {/* Keyframes for animations */}
       <style>
