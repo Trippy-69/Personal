@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+{/*import React, { useState, useRef, useEffect } from "react";
 import Confetti from 'react-confetti';
 
 function App() {
@@ -230,4 +230,4 @@ function App() {
   );
 }
 
-export default App;
+export default App;/*}
