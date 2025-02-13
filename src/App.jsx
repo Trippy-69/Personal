@@ -62,7 +62,7 @@ function App() {
     setCompliment(randomCompliment);
 
     // Clear the compliment after 3 seconds
-    setTimeout(() => setCompliment(""), 4000);
+    setTimeout(() => setCompliment(""), 6000);
   };
 
   const handleHugClick = () => {
