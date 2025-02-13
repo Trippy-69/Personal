@@ -17,6 +17,7 @@ function App() {
     "Khushboo, you're incredibly jhakass! 🌸",
     "Khushboo, tmhara baat bhi utna specail hai jitni ki tum khud!🌟",
     "Khushboo, buddhu! 🍀",
+    "Hor das kinniya tareefan chaidiya tenu 👀",
     "Khushboo, tum kitni pyari ho andaza h?",
     "Khushboo, you're beautiful inside and out! 🌹",
     "Khushboo, tmpe bun bohot suit kta hai! ✨",
