@@ -24,9 +24,15 @@ function Footer() {
   }, []);
 
   return (
-    <footer className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white">
-      <p className="text-sm">Made with ♥️ by Preet</p>
-      <p className="text-sm">Yours since {timeSince}</p>
+    <footer className="fixed bottom-0 left-0 right-0 py-3 bg-pink-500/20 backdrop-blur-sm border-t border-pink-300/30">
+      <div className="text-center px-4">
+        <p className="text-xs sm:text-sm text-white font-medium">
+          Made with ♥️ by Preet
+        </p>
+        <p className="text-[10px] sm:text-xs text-pink-100 mt-1 leading-tight break-words">
+          Yours since {timeSince}
+        </p>
+      </div>
     </footer>
   );
 }
