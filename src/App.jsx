@@ -108,7 +108,7 @@ function App() {
   const handleLetsTalkClick = () => {
     // Redirect to WhatsApp with a pre-filled message
     const phoneNumber = "8637521809"; // Your phone number
-    const message = "Hi, Pikuu it's your kuchi♥️"; // Pre-filled message
+    const message = "It's your kuchi ♥️"; // Pre-filled message
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
   };
@@ -173,8 +173,8 @@ function App() {
       <div className="bg-white p-6 sm:p-10 rounded-3xl shadow-2xl max-w-xs sm:max-w-md relative z-10 border-4 border-pink-500 transform transition-all hover:scale-105 hover:shadow-pink-600 text-center flex flex-col items-center" style={{ fontFamily: 'Times New Roman, serif' }}>
         <h2 className="text-3xl sm:text-5xl text-pink-600 font-bold leading-tight">In memory of beloved, Kuchi💖</h2>
         <p className="text-gray-700 mt-4 text-lg sm:text-xl text-center">
-          I'll love you my baby girl whereever you are🥺
-          15-May-2021 - 25-Aug-2022 ∞
+          I'll love you my baby girl whereever you are🥺<br/>
+          15-May-2021 - 25-Aug-2022 
         </p>
         <div className="mt-6 space-y-4 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row items-center justify-center w-full">
           <button onClick={handleForgiveClick} className="bg-[#FBAED2] text-white px-6 py-2 rounded-full shadow-md hover:bg-[#F98FB8] transition transform hover:scale-105 w-full sm:w-auto">
