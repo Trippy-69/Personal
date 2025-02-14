@@ -1,5 +1,7 @@
+
 import React, { useState, useRef } from "react";
 import Confetti from 'react-confetti';
+
 
 function App() {
   const [showCelebration, setShowCelebration] = useState(false);
@@ -16,7 +18,7 @@ function App() {
     "Kuchi, you're my Vitamin K",
     "Kuchi, you're incredibly jhakass! 🌸",
     "Kuchi, tmhara baat bhi utna special hai jitni ki tum khud!🌟",
-    "Kuchi, buddhu! �",
+    "Kuchi, buddhu! 🍀",
     "Hor das kinniya tareefan chaidiya tenu 👀",
     "You're the one, you're the only one!",
     "Kuchi, I'll always love you baby🥺",
@@ -80,15 +82,15 @@ function App() {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen bg-gradient-to-b from-pink-100 to-pink-300 text-center relative overflow-hidden p-4">
-      {showCelebration && <Confetti width={window.innerWidth} height={window.innerHeight} numberOfPieces={200} recycle={false} />}
+    <div className="flex items-center justify-center h-screen bg-gradient-to-r from-pink-200 via-pink-300 to-pink-400 text-center relative overflow-hidden p-4 sm:p-8">
+      {showCelebration && <Confetti width={window.innerWidth} height={window.innerHeight} numberOfPieces={400} recycle={false} />}
 
       {showHearts && (
         <div className="fixed inset-0 pointer-events-none flex flex-wrap">
-          {[...Array(15)].map((_, i) => (
+          {[...Array(20)].map((_, i) => (
             <div
               key={i}
-              className="absolute text-4xl sm:text-5xl animate-heart opacity-80"
+              className="absolute text-5xl sm:text-7xl animate-heart opacity-80"
               style={{
                 left: `${Math.random() * 90}%`,
                 top: `${Math.random() * 100}%`,
@@ -102,64 +104,50 @@ function App() {
         </div>
       )}
 
-      {/* Floating Particles */}
-      <div className="fixed inset-0 pointer-events-none">
-        {[...Array(20)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-1.5 h-1.5 bg-pink-200 rounded-full animate-float"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDuration: `${Math.random() * 5 + 3}s`,
-              animationDelay: `${Math.random() * 2}s`,
-            }}
-          />
-        ))}
-      </div>
-
       <audio ref={audioRef} src="/celebration.mp3" />
 
       {thankYouMessage && (
-        <div className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-white p-3 rounded-lg shadow-lg z-20">
-          <p className="text-pink-600 text-lg font-bold">Smileee💖</p>
+        <div className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-white p-4 rounded-lg shadow-lg z-20">
+          <p className="text-pink-600 text-xl font-bold">Smileee💖</p>
         </div>
       )}
 
       {compliment && (
-        <div className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-white p-3 rounded-lg shadow-lg z-20">
-          <p className="text-pink-600 text-lg font-bold">{compliment}</p>
+        <div className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-white p-4 rounded-lg shadow-lg z-20">
+          <p className="text-pink-600 text-xl font-bold">{compliment}</p>
         </div>
       )}
 
       {hugMessage && (
-        <div className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-white p-3 rounded-lg shadow-lg z-20">
-          <p className="text-pink-600 text-lg font-bold">Virtual hug sent to Preet 💖</p>
+        <div className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-white p-4 rounded-lg shadow-lg z-20">
+          <p className="text-pink-600 text-xl font-bold">Virtual hug sent to Preet 💖</p>
         </div>
       )}
 
-      <div className="bg-white p-6 rounded-3xl shadow-lg max-w-xs sm:max-w-md relative z-10 border-2 border-pink-300 transform transition-all hover:scale-105 hover:shadow-pink-400 text-center flex flex-col items-center" style={{ fontFamily: 'Times New Roman, serif' }}>
-        <h2 className="text-2xl sm:text-3xl text-pink-600 font-bold leading-tight">In memory of my beloved, Kuchi💖</h2>
-        <p className="text-gray-700 mt-4 text-base sm:text-lg text-center">
+      <div className="bg-white p-6 sm:p-10 rounded-3xl shadow-2xl max-w-xs sm:max-w-md relative z-10 border-4 border-pink-500 transform transition-all hover:scale-105 hover:shadow-pink-600 text-center flex flex-col items-center" style={{ fontFamily: 'Times New Roman, serif' }}>
+        <h2 className="text-3xl sm:text-5xl text-pink-600 font-bold leading-tight">In memory of my beloved, Kuchi💖</h2>
+        <p className="text-gray-700 mt-4 text-lg sm:text-xl text-center">
           I'll always love you my baby girl wherever you are🥺<br/>
           Your touch faded, but your warmth still lives in the spaces between my heartbeats<br/>
           15-May-2021 - 25-Aug-2022 
         </p>
-        <div className="mt-6 space-y-3 flex flex-col items-center justify-center w-full">
-          <button onClick={handleForgiveClick} className="bg-pink-400 text-white px-6 py-2 rounded-full shadow-md hover:bg-pink-500 transition transform hover:scale-105 w-full">
+        <div className="mt-6 space-y-4 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row items-center justify-center w-full">
+          <button onClick={handleForgiveClick} className="bg-[#FBAED2] text-white px-6 py-2 rounded-full shadow-md hover:bg-[#F98FB8] transition transform hover:scale-105 w-full sm:w-auto">
             Celebrate 🎉
           </button>
-          <button onClick={handleComplimentClick} className="bg-pink-400 text-white px-6 py-2 rounded-full shadow-md hover:bg-pink-500 transition transform hover:scale-105 w-full">
+          <button onClick={handleComplimentClick} className="bg-[#FBAED2] text-white px-6 py-2 rounded-full shadow-md hover:bg-[#F98FB8] transition transform hover:scale-105 w-full sm:w-auto">
             Compliments from Preet 💌
           </button>
-          <button onClick={handleHugClick} className="bg-pink-400 text-white px-6 py-2 rounded-full shadow-md hover:bg-pink-500 transition transform hover:scale-105 w-full">
+          <button onClick={handleHugClick} className="bg-[#FBAED2] text-white px-6 py-2 rounded-full shadow-md hover:bg-[#F98FB8] transition transform hover:scale-105 w-full sm:w-auto">
             Hug 🤗
           </button>
-          <button onClick={handleLetsTalkClick} className="bg-pink-400 text-white px-6 py-2 rounded-full shadow-md hover:bg-pink-500 transition transform hover:scale-105 w-full">
+          <button onClick={handleLetsTalkClick} className="bg-[#FBAED2] text-white px-6 py-2 rounded-full shadow-md hover:bg-[#F98FB8] transition transform hover:scale-105 w-full sm:w-auto">
             Let's Talk 💬
           </button>
         </div>
       </div>
+
+    
 
       <style>
         {`

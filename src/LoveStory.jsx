@@ -99,7 +99,7 @@ export default function LoveStory() {
             From the moment we met, you brought so much joy and light into my life. 
             Our journey together has been filled with laughter, love, and unforgettable memories. 
             Even though we're not together anymore, you'll always hold a special place in my heart. 
-            This site is a tribute to the love we shared and the beautiful moments we created together. 💖
+            This site is a tribute to the love we shared and the beautiful moments we created together. 
           </p>
         </motion.div>
 
@@ -139,7 +139,7 @@ export default function LoveStory() {
           <p className="text-gray-700 text-lg leading-relaxed">
             I hope you find everything you're looking for in life. 
             May you always be surrounded by love, happiness, and success. 
-            No matter where life takes you, know that I'll always be cheering for you from afar. 🌟
+            No matter where life takes you, know that I'll always be cheering for you from afar. 
           </p>
         </motion.div>
 
@@ -152,8 +152,8 @@ export default function LoveStory() {
         >
           <h3 className="text-3xl text-pink-600 font-bold mb-4">Thank You</h3>
           <p className="text-gray-700 text-lg leading-relaxed">
-            Thank you for being a part of my life and teaching me so much about love and kindness. 
-            You've made me a better person, and I'll always cherish the time we spent together. 💖
+            Thank you for being a part of my life and teaching me so much about love. 
+            You've made me a better person, and I'll always cherish the time we spent together.
           </p>
         </motion.div>
       </div>
