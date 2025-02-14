@@ -120,7 +120,9 @@ export default function LoveStory() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.1 + 0.4 }}
               >
-                <p className="text-gray-700 italic text-lg">{letter}</p>
+                <p className="text-gray-700 italic text-lg" style={{ fontFamily: 'Times New Roman, serif' }}>
+                  {letter}
+                </p>
               </motion.div>
             ))}
           </div>
