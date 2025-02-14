@@ -1,5 +1,7 @@
-import React, { useState, useRef, useEffect } from "react";
+
+import React, { useState, useRef } from "react";
 import Confetti from 'react-confetti';
+
 
 function App() {
   const [showCelebration, setShowCelebration] = useState(false);
@@ -7,11 +9,9 @@ function App() {
   const [compliment, setCompliment] = useState("");
   const [hugMessage, setHugMessage] = useState(false);
   const [showHearts, setShowHearts] = useState(false);
-  const [timeSince, setTimeSince] = useState("");
   const audioRef = useRef(null);
-  const timeoutRef = useRef(null); // Ref to store the timeout ID
+  const timeoutRef = useRef(null);
 
-  // Custom list of English compliments focused on Khushboo
   const compliments = [
     "Kuchi, tmpe cat eye frame bohot suit krta h! 💖",
     "Kuchi, tmhara smile ispe kon naa fida ho! 🌟",
@@ -45,36 +45,13 @@ function App() {
     "Kuchi, your eyes are like gehra samandar! (dub jau?) 👀",
   ];
 
-  useEffect(() => {
-    const startDate = new Date("2002-01-10");
-    const interval = setInterval(() => {
-      const now = new Date();
-      const diff = now - startDate;
-
-      const seconds = Math.floor((diff / 1000) % 60);
-      const minutes = Math.floor((diff / (1000 * 60)) % 60);
-      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const years = Math.floor(days / 365);
-      const months = Math.floor((days % 365) / 30);
-
-      setTimeSince(`${years} years, ${months} months, ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`);
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, []);
-
   const handleForgiveClick = () => {
     setShowCelebration(true);
     setThankYouMessage(true);
-
-    // Play the sound
     if (audioRef.current) {
-      audioRef.current.currentTime = 0; // Reset sound to start
+      audioRef.current.currentTime = 0;
       audioRef.current.play();
     }
-
-    // Reset everything after 5 seconds
     setTimeout(() => {
       setShowCelebration(false);
       setThankYouMessage(false);
@@ -82,24 +59,15 @@ function App() {
   };
 
   const handleComplimentClick = () => {
-    // Clear the previous timeout if it exists
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-    }
-
-    // Pick a random compliment from the list
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
     const randomCompliment = compliments[Math.floor(Math.random() * compliments.length)];
     setCompliment(randomCompliment);
-
-    // Set a new timeout to clear the compliment after 6 seconds
     timeoutRef.current = setTimeout(() => setCompliment(""), 4000);
   };
 
   const handleHugClick = () => {
     setHugMessage(true);
     setShowHearts(true);
-
-    // Clear the hug message and hearts after 4 seconds
     setTimeout(() => {
       setHugMessage(false);
       setShowHearts(false);
@@ -107,26 +75,16 @@ function App() {
   };
 
   const handleLetsTalkClick = () => {
-    // Redirect to WhatsApp with a pre-filled message
-    const phoneNumber = "8637521809"; // Your phone number
-    const message = "It's your kuchi ♥️"; // Pre-filled message
+    const phoneNumber = "8637521809";
+    const message = "It's your kuchi ♥️";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
   };
 
   return (
     <div className="flex items-center justify-center h-screen bg-gradient-to-r from-pink-200 via-pink-300 to-pink-400 text-center relative overflow-hidden p-4 sm:p-8">
-      {/* Full-screen Confetti */}
-      {showCelebration && (
-        <Confetti
-          width={window.innerWidth}
-          height={window.innerHeight}
-          numberOfPieces={400} // Increased confetti pieces
-          recycle={false}
-        />
-      )}
+      {showCelebration && <Confetti width={window.innerWidth} height={window.innerHeight} numberOfPieces={400} recycle={false} />}
 
-      {/* Heart Animation */}
       {showHearts && (
         <div className="fixed inset-0 pointer-events-none flex flex-wrap">
           {[...Array(20)].map((_, i) => (
@@ -146,31 +104,26 @@ function App() {
         </div>
       )}
 
-      {/* Audio element */}
       <audio ref={audioRef} src="/celebration.mp3" />
 
-      {/* Thank You Message */}
       {thankYouMessage && (
         <div className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-white p-4 rounded-lg shadow-lg z-20">
           <p className="text-pink-600 text-xl font-bold">Smileee💖</p>
         </div>
       )}
 
-      {/* Compliment Message */}
       {compliment && (
         <div className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-white p-4 rounded-lg shadow-lg z-20">
           <p className="text-pink-600 text-xl font-bold">{compliment}</p>
         </div>
       )}
 
-      {/* Hug Message */}
       {hugMessage && (
         <div className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-white p-4 rounded-lg shadow-lg z-20">
           <p className="text-pink-600 text-xl font-bold">Virtual hug sent to Preet 💖</p>
         </div>
       )}
 
-      {/* Main Content */}
       <div className="bg-white p-6 sm:p-10 rounded-3xl shadow-2xl max-w-xs sm:max-w-md relative z-10 border-4 border-pink-500 transform transition-all hover:scale-105 hover:shadow-pink-600 text-center flex flex-col items-center" style={{ fontFamily: 'Times New Roman, serif' }}>
         <h2 className="text-3xl sm:text-5xl text-pink-600 font-bold leading-tight">In memory of my beloved, Kuchi💖</h2>
         <p className="text-gray-700 mt-4 text-lg sm:text-xl text-center">
@@ -194,13 +147,8 @@ function App() {
         </div>
       </div>
 
-      {/* Footer */}
-      <footer className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white">
-        <p className="text-sm">Made with ♥️ by Preet</p>
-        <p className="text-sm">Yours since {timeSince}</p>
-      </footer>
+    
 
-      {/* Keyframes for animations */}
       <style>
         {`
           @keyframes float {
