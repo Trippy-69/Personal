@@ -22,9 +22,10 @@ function App() {
     "Hor das kinniya tareefan chaidiya tenu 👀",
     "You're the one, you're the only one!",
     "Kuchi, I'll always love you baby🥺",
-    "Meri Good Morning tu hai Good Night bhi tu👉👈",
+    "Meri Good Morning tu hai Meri Good Night bhi tu👉👈",
     "Kuchi, tum kitni pyari ho andaza h?",
-    "baby i love you the most",
+    "Baby i love you the most",
+    "Safar khubsurat hai manzil se bhi! (tere sath)",
     "Kuchi, you're beautiful inside and out! 🌹",
     "Kuchi, tmpe bun bohot suit kta hai! ✨",
     "Kuchi, you're my favorite! 💕",
@@ -171,9 +172,9 @@ function App() {
 
       {/* Main Content */}
       <div className="bg-white p-6 sm:p-10 rounded-3xl shadow-2xl max-w-xs sm:max-w-md relative z-10 border-4 border-pink-500 transform transition-all hover:scale-105 hover:shadow-pink-600 text-center flex flex-col items-center" style={{ fontFamily: 'Times New Roman, serif' }}>
-        <h2 className="text-3xl sm:text-5xl text-pink-600 font-bold leading-tight">In memory of beloved, Kuchi💖</h2>
+        <h2 className="text-3xl sm:text-5xl text-pink-600 font-bold leading-tight">In memory of my beloved, Kuchi💖</h2>
         <p className="text-gray-700 mt-4 text-lg sm:text-xl text-center">
-          I'll love you my baby girl whereever you are🥺<br/>
+          I'll always love you my baby girl wherever you are🥺<br/>
           15-May-2021 - 25-Aug-2022 
         </p>
         <div className="mt-6 space-y-4 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row items-center justify-center w-full">
