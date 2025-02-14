@@ -24,12 +24,15 @@ function Footer() {
   }, []);
 
   return (
-    <footer className="fixed bottom-0 left-0 right-0 py-3 bg-pink-500/20 backdrop-blur-sm border-t border-pink-300/30">
+    <footer 
+      className="w-full py-4 bg-pink-300/70 backdrop-blur-sm border-t border-pink-300/30 mt-auto"
+      style={{ fontFamily: 'Times New Roman, serif' }}
+    >
       <div className="text-center px-4">
-        <p className="text-xs sm:text-sm text-white font-medium">
+        <p className="text-sm text-white font-medium">
           Made with ♥️ by Preet
         </p>
-        <p className="text-[10px] sm:text-xs text-pink-100 mt-1 leading-tight break-words">
+        <p className="text-xs text-pink-50 mt-1 px-2 break-words">
           Yours since {timeSince}
         </p>
       </div>
