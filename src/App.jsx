@@ -1,4 +1,4 @@
-{/*import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Confetti from 'react-confetti';
 
 function App() {
@@ -13,32 +13,35 @@ function App() {
 
   // Custom list of English compliments focused on Khushboo
   const compliments = [
-    "Khushboo, tmpe cat eye frame bohot suit krta h! 💖",
-    "Khushboo, tmhara smile ispe kon naa fida ho! 🌟",
-    "Khushboo, you're my Vitamin K",
-    "Khushboo, you're incredibly jhakass! 🌸",
-    "Khushboo, tmhara baat bhi utna special hai jitni ki tum khud!🌟",
-    "Khushboo, buddhu! 🍀",
+    "Kuchi, tmpe cat eye frame bohot suit krta h! 💖",
+    "Kuchi, tmhara smile ispe kon naa fida ho! 🌟",
+    "Kuchi, you're my Vitamin K",
+    "Kuchi, you're incredibly jhakass! 🌸",
+    "Kuchi, tmhara baat bhi utna special hai jitni ki tum khud!🌟",
+    "Kuchi, buddhu! 🍀",
     "Hor das kinniya tareefan chaidiya tenu 👀",
     "You're the one, you're the only one!",
-    "Khushboo, tum kitni pyari ho andaza h?",
-    "Khushboo, you're beautiful inside and out! 🌹",
-    "Khushboo, tmpe bun bohot suit kta hai! ✨",
-    "Khushboo, you're my favorite! 💕",
-    "Khushboo, you have the best smile (sacchi!) 😊",
-    "Khushboo, you're like first rain! pehli barish",
-    "Khushboo, tenu suit suit krda! 🌟",
-    "Khushboo, tumari baatein itni sweet h ki chocolate apna job chhod de! 💘",
-    "Khushboo, you're simply the best! 🏆",
-    "Khushboo, you have a different positivity within you! 🌈",
-    "Khushboo, you carry a different aura!",
-    "Yaar, tum dil ki bohot saaf ho :) 💛",
-    "Khushboo, chalti firti cocaine💎",
-    "Khushboo, you're one of a kind! 🌟",
-    "Khushboo, your beauty is unmatched! 🌸",
-    "Khushboo, you're the best as I always say! 🌹",
-    "Khushboo, tum ek poem ho jo bina likhe bhi bohot kuch keh jati ho! ✨",
-    "Khushboo, your eyes are like gehra samandar! (dub jau?) 👀",
+    "Kuchi, I'll always love you baby🥺",
+    "Meri Good Morning tu hai Good Night bhi tu👉👈",
+    "Kuchi, tum kitni pyari ho andaza h?",
+    "baby i love you the most",
+    "Kuchi, you're beautiful inside and out! 🌹",
+    "Kuchi, tmpe bun bohot suit kta hai! ✨",
+    "Kuchi, you're my favorite! 💕",
+    "Kuchi, you have the best smile (sacchi!) 😊",
+    "Kuchi, you're like first rain! pehli barish",
+    "Kuchi, tenu suit suit krda! 🌟",
+    "Kuchi, tumari baatein itni sweet h ki chocolate apna job chhod de! 💘",
+    "Kuchi, you're simply the best! 🏆",
+    "Kuchi, you have a different positivity within you! 🌈",
+    "Kuchi, you carry a different aura!",
+    "kuchi, tum dil ki bohot saaf ho :) 💛",
+    "Kuchi, chalti firti cocaine💎",
+    "Kuchi, you're one of a kind! 🌟",
+    "Kuchi, your beauty is unmatched! 🌸",
+    "Kuchi, you're the best as I always say! 🌹",
+    "Kuchi, tum ek poem ho jo bina likhe bhi bohot kuch keh jati ho! ✨",
+    "Kuchi, your eyes are like gehra samandar! (dub jau?) 👀",
   ];
 
   useEffect(() => {
@@ -105,16 +108,9 @@ function App() {
   const handleLetsTalkClick = () => {
     // Redirect to WhatsApp with a pre-filled message
     const phoneNumber = "8637521809"; // Your phone number
-    const message = "Hi, Preet"; // Pre-filled message
+    const message = "Hi, Pikuu it's your kuchi♥️"; // Pre-filled message
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
-  };
-
-  const handleAgreementClick = () => {
-    // Redirect to Google Docs
-    const googleDocsUrl =
-      "https://docs.google.com/document/d/1PuUVZ7N3mogmL1j2Ymf47zwUfLP1QmiEYSN3KVF2ul4/edit?usp=drivesdk";
-    window.open(googleDocsUrl, "_blank");
   };
 
   return (
@@ -175,16 +171,14 @@ function App() {
 
       {/* Main Content */}
       <div className="bg-white p-6 sm:p-10 rounded-3xl shadow-2xl max-w-xs sm:max-w-md relative z-10 border-4 border-pink-500 transform transition-all hover:scale-105 hover:shadow-pink-600 text-center flex flex-col items-center" style={{ fontFamily: 'Times New Roman, serif' }}>
-        <h1 className="text-3xl sm:text-5xl text-pink-600 font-bold leading-tight">Thanks for understanding me, Kuchi! 💖</h1>
+        <h1 className="text-3xl sm:text-5xl text-pink-600 font-bold leading-tight">In memory of beloved, Kuchi💖</h1>
         <p className="text-gray-700 mt-4 text-lg sm:text-xl text-center">
-          I love you my baby girl🥺
+          I'll love you my baby girl whereever you are🥺
+          15-May-2021 - 25-Aug-2022 ∞
         </p>
         <div className="mt-6 space-y-4 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row items-center justify-center w-full">
           <button onClick={handleForgiveClick} className="bg-[#FBAED2] text-white px-6 py-2 rounded-full shadow-md hover:bg-[#F98FB8] transition transform hover:scale-105 w-full sm:w-auto">
             Celebrate 🎉
-          </button>
-          <button onClick={handleAgreementClick} className="bg-[#FBAED2] text-white px-6 py-2 rounded-full shadow-md hover:bg-[#F98FB8] transition transform hover:scale-105 w-full sm:w-auto">
-            Forgiveness Agreement 📜
           </button>
           <button onClick={handleComplimentClick} className="bg-[#FBAED2] text-white px-6 py-2 rounded-full shadow-md hover:bg-[#F98FB8] transition transform hover:scale-105 w-full sm:w-auto">
             Compliments from Preet 💌
@@ -230,4 +224,4 @@ function App() {
   );
 }
 
-export default App;/*}
+export default App;
