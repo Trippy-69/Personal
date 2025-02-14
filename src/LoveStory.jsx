@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export default function LoveStory() {
   const letters = [
-    "Dear Kuchi, you'll always be my favorite 'what if.' I hope life brings you all the happiness you deserve.",
+    "Dear Kuchi, you'll always be my favorite 'what if' I hope life brings you all the happiness you deserve.",
     "Kuchi, I still smile when I think of our time together. Thank you for being a part of my life.",
   ];
 
