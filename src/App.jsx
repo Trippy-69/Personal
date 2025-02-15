@@ -1,7 +1,6 @@
 import React, { useState, useRef } from "react";
 import Confetti from 'react-confetti';
 
-
 function App() {
   const [showCelebration, setShowCelebration] = useState(false);
   const [thankYouMessage, setThankYouMessage] = useState(false);
@@ -106,29 +105,32 @@ function App() {
       <audio ref={audioRef} src="/celebration.mp3" />
 
       {thankYouMessage && (
-        <div className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-white p-4 rounded-lg shadow-lg z-20">
-          <p className="text-pink-600 text-xl font-bold">Smileee💖</p>
+        <div className="fixed bottom-4 sm:top-4 left-1/2 transform -translate-x-1/2 bg-white p-4 rounded-lg shadow-lg z-50 max-w-[90%] animate-slide-up">
+          <p className="text-pink-600 text-lg sm:text-xl font-bold">Smileee💖</p>
         </div>
       )}
 
       {compliment && (
-        <div className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-white p-4 rounded-lg shadow-lg z-20">
-          <p className="text-pink-600 text-xl font-bold">{compliment}</p>
+        <div className="fixed bottom-4 sm:top-4 left-1/2 transform -translate-x-1/2 bg-white p-4 rounded-lg shadow-lg z-50 max-w-[90%] animate-slide-up">
+          <p className="text-pink-600 text-lg sm:text-xl font-bold">{compliment}</p>
         </div>
       )}
 
       {hugMessage && (
-        <div className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-white p-4 rounded-lg shadow-lg z-20">
-          <p className="text-pink-600 text-xl font-bold">Virtual hug sent to Preet 💖</p>
+        <div className="fixed bottom-4 sm:top-4 left-1/2 transform -translate-x-1/2 bg-white p-4 rounded-lg shadow-lg z-50 max-w-[90%] animate-slide-up">
+          <p className="text-pink-600 text-lg sm:text-xl font-bold">Virtual hug sent to Preet 💖</p>
         </div>
       )}
 
       <div className="bg-white p-6 sm:p-10 rounded-3xl shadow-2xl max-w-xs sm:max-w-md relative z-10 border-4 border-pink-500 transform transition-all hover:scale-105 hover:shadow-pink-600 text-center flex flex-col items-center" style={{ fontFamily: 'Times New Roman, serif' }}>
         <h2 className="text-3xl sm:text-5xl text-pink-600 font-bold leading-tight">In memory of my beloved, Kuchi💖</h2>
-        <p className="text-gray-700 mt-4 text-lg sm:text-xl text-justify">
-          I'll always love you my baby girl🥺<br/>
-          <br/>I don't know where you went without any clue, but I still remember the warmth of your hug. I would have held you till my arms ached but how could I have known it was a farewell? <br/>          <br/> Your touch faded, but your warmth still lives in the spaces between my heartbeats<br/>
-          <span className="block mt-2 text-center font-semibold text-pink-600">15-May-2021 - 25-Aug-2022</span> 
+        <p className="text-gray-700 mt-4 text-base sm:text-lg text-justify px-2 sm:px-0 leading-relaxed">
+          I'll always love you, my baby girl 🥺<br /><br />
+          I don't know where you went without any clue, but I still remember the warmth of your hug. I would have held you till my arms ached, but how could I have known it was a farewell? <br /><br />
+          Your touch faded, but your warmth still lives in the spaces between my heartbeats.<br /><br />
+          <span className="block mt-4 text-center font-semibold text-pink-600 text-lg sm:text-xl">
+            15-May-2021 - 25-Aug-2022
+          </span>
         </p>
         <div className="mt-6 space-y-4 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row items-center justify-center w-full">
           <button onClick={handleForgiveClick} className="bg-[#FBAED2] text-white px-6 py-2 rounded-full shadow-md hover:bg-[#F98FB8] transition transform hover:scale-105 w-full sm:w-auto">
@@ -145,8 +147,6 @@ function App() {
           </button>
         </div>
       </div>
-
-    
 
       <style>
         {`
@@ -166,6 +166,14 @@ function App() {
           }
           .animate-heart {
             animation: heart 2s ease-out;
+          }
+
+          @keyframes slide-up {
+            0% { transform: translate(-50%, 100%); }
+            100% { transform: translate(-50%, 0); }
+          }
+          .animate-slide-up {
+            animation: slide-up 0.3s ease-out;
           }
         `}
       </style>
