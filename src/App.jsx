@@ -75,7 +75,7 @@ function App() {
 
   const handleLetsTalkClick = () => {
     const phoneNumber = "8637521809";
-    const message = "It's your kuchi ♥️";
+    const message = "It's your kuchi💕";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
   };
