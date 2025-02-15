@@ -5,6 +5,7 @@ export default function LoveStory() {
   const letters = [
     "Dear Kuchi, you'll always be my favorite 'what if' I hope life brings you all the happiness you deserve.",
     "Kuchi, I still smile when I think of our time together. Thank you for being a part of my life.",
+    "Kuchi, The world feels hollow now, a maze of shadows where you once stood I search for you in every crowded silence, in the whispers of the wind, but all that remains are ghosts echoes of your embrace, the warmth of your arms still burning against my skin",
   ];
 
   // Floating hearts configuration
