@@ -31,7 +31,7 @@ function App() {
     "Kuchi, you're like first rain! pehli barish",
     "Kuchi, tenu suit suit krda! 🌟",
     "Kuchi, tumari baatein itni sweet h ki chocolate apna job chhod de! 💘",
-    "Kuchi, you're simply the best! �",
+    "Kuchi, you're simply the best! 🏆",
     "Kuchi, you have a different positivity within you! 🌈",
     "Kuchi, you carry a different aura!",
     "kuchi, tum dil ki bohot saaf ho :) 💛",
@@ -124,11 +124,13 @@ function App() {
 
       <div className="bg-white p-6 sm:p-10 rounded-3xl shadow-2xl max-w-xs sm:max-w-md relative z-10 border-4 border-pink-500 transform transition-all hover:scale-105 hover:shadow-pink-600 text-center flex flex-col items-center" style={{ fontFamily: 'Times New Roman, serif' }}>
         <h2 className="text-3xl sm:text-5xl text-pink-600 font-bold leading-tight">In memory of my beloved, Kuchi💖</h2>
-        <p className="text-gray-700 mt-4 text-lg sm:text-xl text-left sm:text-center px-2 sm:px-0">
-          I'll always love you, my baby girl 🥺<br />
-          I don't know where you went without any clue, but I still remember the warmth of your hug. I would have held you till my arms ached, but how could I have known it was a farewell? <br />
-          Your touch faded, but your warmth still lives in the spaces between my heartbeats.<br />
-          <span className="block mt-2 text-center font-semibold text-pink-600">15-May-2021 - 25-Aug-2022</span>
+        <p className="text-gray-700 mt-4 text-base sm:text-lg text-justify px-2 sm:px-0 leading-relaxed">
+          I'll always love you, my baby girl 🥺<br /><br />
+          I don't know where you went without any clue, but I still remember the warmth of your hug. I would have held you till my arms ached, but how could I have known it was a farewell? <br /><br />
+          Your touch faded, but your warmth still lives in the spaces between my heartbeats.<br /><br />
+          <span className="block mt-4 text-center font-semibold text-pink-600 text-lg sm:text-xl">
+            15-May-2021 - 25-Aug-2022
+          </span>
         </p>
         <div className="mt-6 space-y-4 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row items-center justify-center w-full">
           <button onClick={handleForgiveClick} className="bg-[#FBAED2] text-white px-6 py-2 rounded-full shadow-md hover:bg-[#F98FB8] transition transform hover:scale-105 w-full sm:w-auto">
