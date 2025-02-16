@@ -24,7 +24,7 @@ Main hamesha intezar karunga, tum palat kar dekhogi kya?
 Jab bhi milogi, sab bhool kar gale lagaogi kya?
 Jaakar bhi ek din wapas aaogi kya?
 Aaogi tab bhi apnaunga tumhe, bas batao... wapas aaogi kya?`,
-`Jab wo gaya, sab kuch chhut gaya, Meri pasand, meri muskurahat, sab kho gaya. Maa ne pehli baar poocha "Kya hua?" Par main bas chup raha, jaise shabdon ka bhi mujhse rishta toot gaya ho
+`Jab wo gaya, sab kuch chhut gaya, Meri pasand, meri muskurahat, sab kho gaya. Maa ne pehli baar poocha "Kya hua?" Par main bas chup raha, jaise shabdon ka bhi mujhse rishta toot gaya..
 Woh nahi, toh mohabbat bhi nahi, Meri duniya mein ab roshni bhi nahi. Uske bina sab bekaar sa lagta hai, Meri saanson ka bojh bhi ab bhari lagta hai.
 
 Jo khaana kabhi khushi se khaya tha, Aaj woh samne rakha bhi to aansuon se bhara tha. Jo pal kabhi sukoon dete the, Aaj woh hi zehar lagne lage the.
