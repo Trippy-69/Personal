@@ -95,6 +95,27 @@ Aur agar kabhi kisi raat tujhe bhi yeh dukh mehsoos ho,
 To bas ek baar sochna,
 Ki main ab bhi wahi hoon,
 Bas tere bina thoda adhoora ho gaya hoon.`,
+`Meri Baaton Ka Kabhi Bura Mat Maan'na  
+
+Kabhi kabhi lafz tikhe lgte hai,  
+Par unke peeche koi dukh chhupa hota hai.  
+Main jo kehta hoon, zaroori nahi dukh dene ko kahun,  
+Bas kabhi kabhi dil ka bojh halka karna hota hai.  
+
+Agar kabhi meri baatein chubhein, toh bas itna soch lena,  
+Shaayad us din andar kuch toot raha hoga.  
+Main wahi hoon jo teri har muskurahat se jeeta hai,  
+Par kabhi kabhi andar ka dukh alfaaz ban jata hai.  
+
+Mujhse door mat jaana, bas samajhne ki koshish karna,  
+Main har baar theek nahi hota, par har baar bura bhi nahi.  
+Tujhse jo keh doon, woh sirf gusse ka jadoo nahi,  
+Woh shayad kisi purani chot ka ek ankahe dard ka silsila ho.  
+
+Toh meri baaton ka kabhi bura mat maan'na,  
+Main chahta hoon tu hamesha mere saath rahe.  
+Agar kabhi kuch galat keh doon, toh sirf ek pal soch lena,  
+Main woh hi hoon jo tujhe kabhi khona nahi chahta. `,
   ];
 
   // Floating hearts configuration
