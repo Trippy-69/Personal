@@ -6,26 +6,43 @@ export default function LoveStory() {
     "Dear Kuchi, you'll always be my favorite 'what if' I hope life brings you all the happiness you deserve.",
     "Kuchi, I still smile when I think of our time together. Thank you for being a part of my life.",
     "Kuchi, The world feels hollow now, a maze of shadows where you once stood I search for you in every crowded silence, in the whispers of the wind, but all that remains are ghosts echoes of your embrace, the warmth of your arms still burning against my skin",
+    `Chali gayi na tum, vapis aaogi kya?
+Dard badh gaya hai, sambhal paogi kya?
+Toot raha hoon bohot, apnaogi kya?
+Apna bana kar, saath nibhaogi kya?
+Kisi aur ka na hokar, sirf mera rahogi kya?
+Jab bhi hamara naam sunogi, yaad karogi kya?
+Duniya ka bojh bhari hoga, tab mujhe dhoondogi kya?
+Apne kareebiyon se mera haal puchhogi kya?
+Tum wapas aaogi kya?
+Pyaar mera abhi bhi hai, tum samajh paogi kya?
+Samajh kar mujhe, mere saath reh paogi kya?
+Pagal ho gaya hoon tere ishq mein, mujhe sawar paogi kya?
+Is rishte ko ek aakhri mauka de paogi kya?
+Bhale saalon beet jaye, tum laut aaogi kya?
+Main hamesha intezar karunga, tum palat kar dekhogi kya?
+Jab bhi milogi, sab bhool kar gale lagaogi kya?
+Jaakar bhi ek din wapas aaogi kya?
+Aaogi tab bhi apnaunga tumhe, bas batao... wapas aaogi kya?`,
   ];
 
   // Floating hearts configuration
   const generateHearts = (isMobile) => {
-    const count = isMobile ? 10 : 15; // Fewer hearts on mobile
+    const count = isMobile ? 10 : 15;
     return Array.from({ length: count }).map((_, i) => ({
       id: i,
-      left: Math.random() * 100, // Spread across the full width
-      top: Math.random() * 100, // Spread across the full height
-      size: `${2 + Math.random() * 3}rem`, // Keep the same size
+      left: Math.random() * 100,
+      top: Math.random() * 100,
+      size: `${2 + Math.random() * 3}rem`,
       delay: Math.random() * 2,
       duration: 4 + Math.random() * 2,
-      opacity: isMobile ? 0.2 : 0.4 // Slightly more transparent on mobile
+      opacity: isMobile ? 0.2 : 0.4
     }));
   };
 
   const [isMobile, setIsMobile] = useState(false);
   const [hearts, setHearts] = useState(() => generateHearts(false));
 
-  // Mobile detection and heart regeneration
   useEffect(() => {
     const checkMobile = () => {
       const mobile = window.matchMedia('(max-width: 640px)').matches;
@@ -38,39 +55,19 @@ export default function LoveStory() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  // Floating Heart Component
   const FloatingHeart = ({ left, top, size, delay, duration, opacity }) => (
     <motion.div
       className="absolute z-0 pointer-events-none"
-      style={{
-        left: `${left}%`,
-        top: `${top}%`,
-        width: size,
-        height: size,
-        opacity: opacity
-      }}
+      style={{ left: `${left}%`, top: `${top}%`, width: size, height: size, opacity }}
       initial={{ y: -10, rotate: -15 }}
-      animate={{
-        y: [0, 20, 0],
-        rotate: [-15, 15, -15],
-        scale: [0.9, 1.1, 0.9]
-      }}
-      transition={{
-        duration: duration,
-        repeat: Infinity,
-        repeatType: 'mirror',
-        delay: delay,
-        ease: 'easeInOut'
-      }}
+      animate={{ y: [0, 20, 0], rotate: [-15, 15, -15], scale: [0.9, 1.1, 0.9] }}
+      transition={{ duration, repeat: Infinity, repeatType: 'mirror', delay, ease: 'easeInOut' }}
     >
       <svg
         viewBox="0 0 24 24"
         fill="currentColor"
         className="w-full h-full"
-        style={{ 
-          color: '#fb7185',
-          filter: 'drop-shadow(0 2px 4px rgba(251, 113, 133, 0.15))'
-        }}
+        style={{ color: '#fb7185', filter: 'drop-shadow(0 2px 4px rgba(251, 113, 133, 0.15))' }}
       >
         <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
       </svg>
@@ -79,16 +76,13 @@ export default function LoveStory() {
 
   return (
     <div className="relative min-h-screen p-6 bg-gradient-to-b from-pink-50 to-pink-100" style={{ fontFamily: 'Times New Roman, serif' }}>
-      {/* Floating Hearts Background */}
       <div className="fixed inset-0">
         {hearts.map((heart) => (
           <FloatingHeart key={heart.id} {...heart} />
         ))}
       </div>
 
-      {/* Main Content */}
       <div className="max-w-2xl mx-auto relative z-10 space-y-16">
-        {/* Our Story Section */}
         <motion.div 
           className="bg-white rounded-xl p-8 shadow-lg backdrop-blur-sm"
           initial={{ opacity: 0, y: 20 }}
@@ -104,7 +98,6 @@ export default function LoveStory() {
           </p>
         </motion.div>
 
-        {/* Letters Section */}
         <motion.div 
           className="bg-white rounded-xl p-8 shadow-lg backdrop-blur-sm"
           initial={{ opacity: 0, y: 20 }}
@@ -121,15 +114,35 @@ export default function LoveStory() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.1 + 0.4 }}
               >
-                <p className="text-gray-700 italic text-lg" style={{ fontFamily: 'Times New Roman, serif' }}>
-                  {letter}
-                </p>
+                {typeof letter === 'string' && letter.startsWith('Chali') ? (
+                  <div className="space-y-4">
+                    {letter.split('\n').map((line, lineIndex) => (
+                      <motion.p
+                        key={lineIndex}
+                        className="text-gray-700 italic text-xl mb-4"
+                        style={{ fontFamily: 'Times New Roman, serif' }}
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ 
+                          delay: lineIndex * 0.3,
+                          duration: 0.6,
+                          ease: 'easeInOut'
+                        }}
+                      >
+                        {line}
+                      </motion.p>
+                    ))}
+                  </div>
+                ) : (
+                  <p className="text-gray-700 italic text-lg" style={{ fontFamily: 'Times New Roman, serif' }}>
+                    {letter}
+                  </p>
+                )}
               </motion.div>
             ))}
           </div>
         </motion.div>
 
-        {/* Wishes Section */}
         <motion.div 
           className="bg-white rounded-xl p-8 shadow-lg backdrop-blur-sm"
           initial={{ opacity: 0, y: 20 }}
@@ -144,7 +157,6 @@ export default function LoveStory() {
           </p>
         </motion.div>
 
-        {/* Thank You Section */}
         <motion.div 
           className="bg-white rounded-xl p-8 shadow-lg backdrop-blur-sm"
           initial={{ opacity: 0, y: 20 }}
