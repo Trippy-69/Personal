@@ -24,6 +24,39 @@ Main hamesha intezar karunga, tum palat kar dekhogi kya?
 Jab bhi milogi, sab bhool kar gale lagaogi kya?
 Jaakar bhi ek din wapas aaogi kya?
 Aaogi tab bhi apnaunga tumhe, bas batao... wapas aaogi kya?`,
+`Jab wo gaya, sab kuch chhut gaya, Meri pasand, meri muskurahat, sab kho gaya. Maa ne pehli baar poocha- "Kya hua?" Par main toh khud hi khud se khafa ho gaya.
+
+Woh nahi, toh mohabbat bhi nahi, Meri duniya mein ab roshni bhi nahi. Uske bina sab bekaar sa lagta hai, Meri saanson ka bojh bhi ab bhari lagta hai.
+
+Jo khaana kabhi khushi se khaya tha, Aaj woh samne rakha bhi to aansuon se bhara tha. Jo pal kabhi sukoon dete the, Aaj woh hi zehar lagne lage the.
+
+Zinda hoon, par sirf naam ke liye, Dil dhadakta hai, bas ek kaam ke liye. Bas ek aur dukh, ek aur gehri chot, Aur phir shayad yeh kahani bhi khatam ho.
+
+Lekin shayad... ek din, kahin, koi raah mil jaaye, Koi wajah ho jeene ki, jo dil ko fir se sulag jaaye. Ho sakta hai dukh kabhi kam na ho, Par shayad tere aane se fir jeena sikhne ka man ho.`,
+`Us din jab tune jaana tha,
+Sab kuch wahi thamm sa gaya tha.
+Zubaan pe kitni baatein thi,
+Par kehne ka hausla kahaan tha?
+
+Meri duniya ka har rang chhin gaya,
+Raaton ka sukoon bhi din gaya.
+Jo hasi kabhi teri baaton mein thi,
+Aaj woh aansuon ke saath beh gaya.
+
+Teri yaadon ka ek bhor bacha hai,
+Mere dil ka ab bas shor bacha hai.
+Log kehte hain waqt sab theek karega,
+Par har din tujhse door bita hai.
+
+Kabhi sochta hoon, shayad laut aaye tu,
+Ek din phir meri aawaz sun aaye tu.
+Par sach yeh hai ki jo chala jata hai,
+Woh sirf yaadon mein hi reh paata hai.
+
+Phir bhi... shayad kahin, kisi mod pe,
+Ek naya subah, ek naya dor mile.
+Dukh kabhi pura khatam na hoga,
+Par shayad ek nayi muskurahat ka zor mile.`,
   ];
 
   // Floating hearts configuration
@@ -151,9 +184,27 @@ Aaogi tab bhi apnaunga tumhe, bas batao... wapas aaogi kya?`,
         >
           <h3 className="text-3xl text-pink-600 font-bold mb-4">My Wishes for You</h3>
           <p className="text-gray-700 text-lg leading-relaxed">
-            I hope you find everything you're looking for in life. 
-            May you always be surrounded by love, happiness, and success. 
-            No matter where life takes you, know that I'll always be cheering for you from afar. 
+          Bas ek cheez chahta hoon tu khush rahe.
+Jahan bhi ho, jis bhi mod pe ho, zindagi tujhe muskurane ki wajah de.
+Main nahi hoon tere saath, par iska matlab yeh nahi ki tu ruk jaaye.
+Aage badhna, apne liye, apni khushi ke liye.
+
+Kayi raaton tak ho sakta hai tu mujhe yaad kare,
+Ho sakta hai dil dukhe, aankhein nam ho.
+Par kabhi apne dukh ko apni takdeer mat samajhna.
+Jo chala gaya, woh ek kahani thi.
+Jo aane wala hai, woh tera naya safar hai.
+
+Agar kabhi akela mehsoos ho,
+To yaad rakhna ki tere hone se kisi ki duniya roshan hai.
+Agar kabhi dil bhatakne lage,
+To sirf ek baar apni zindagi ko ek naye nazariye se dekhna.
+
+Main chah kar bhi wapas nahi aa sakta,
+Par meri har dua tere saath rahegi.
+Jeena, khush rehna, aur apne dil ka khayal rakhna.
+Kyunki tu sirf kisi ki yaadon ka hissa nahi,
+Tu kisi ki kahani ka naya shuruwaat hai. 
           </p>
         </motion.div>
 
