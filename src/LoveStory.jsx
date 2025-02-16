@@ -263,7 +263,7 @@ Main chah kar bhi wapas nahi aa sakta,
 Par meri har dua tere saath rahegi.
 Jeena, khush rehna, aur apne dil ka khayal rakhna.
 Kyunki tu sirf kisi ki yaadon ka hissa nahi,
-Tu kisi ki kahani ka naya shuruwaat hai. 
+Tu kisi ki kahani ki nayi shuruwaat hai. 
           </p>
         </motion.div>
 
