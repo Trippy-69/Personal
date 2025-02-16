@@ -31,7 +31,10 @@ Jo khaana kabhi khushi se khaya tha, Aaj woh samne rakha bhi to aansuon se bhara
 
 Zinda hoon, par sirf naam ke liye, Dil dhadakta hai, bas ek kaam ke liye. Bas ek aur dukh, ek aur gehri chot, Aur phir shayad yeh kahani bhi khatam ho.
 
-Lekin shayad... ek din, kahin, koi raah mil jaaye, Koi wajah ho jeene ki, jo dil ko fir se sulag jaaye. Ho sakta hai dukh kabhi kam na ho, Par shayad tere aane se fir jeena sikhne ka man ho.`,
+Lekin shayad... ek din, kahin, koi raasta naya mile,
+Koi wajah ho jeene ki, jo dil ko phir se zinda kare.
+Ho sakta hai dukh kabhi pura na mite,
+Par shayad waqt ke saath jeena dubara seekh lu.`,
 `Us din jab tumhe jaana tha,
 Sab kuch wahi thamm sa gaya tha.
 Zubaan pe kitni baatein thi,
