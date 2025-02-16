@@ -1,7 +1,6 @@
 import React, { useState, useRef } from "react";
 import Confetti from 'react-confetti';
 
-
 function App() {
   const [showCelebration, setShowCelebration] = useState(false);
   const [thankYouMessage, setThankYouMessage] = useState(false);
@@ -17,7 +16,7 @@ function App() {
     "Kuchi, you're my Vitamin K",
     "Kuchi, you're incredibly jhakass! 🌸",
     "Kuchi, tmhara baat bhi utna special hai jitni ki tum khud!🌟",
-    "Kuchi, buddhu! 🍀",
+    "Kuchi, buddhu! �",
     "Hor das kinniya tareefan chaidiya tenu 👀",
     "You're the one, you're the only one!",
     "Kuchi, I'll always love you baby🥺",
@@ -130,23 +129,21 @@ function App() {
           I don't know where you went without any clue, but I still remember the warmth of your hug. I would have held you till my arms ached but how could I have known it was a farewell? <br/>           Your touch faded, but your warmth still lives in the spaces between my heartbeats<br/>
           <span className="block mt-2 text-center font-semibold text-pink-600">15-May-2021 - 25-Aug-2022</span> 
         </p>
-        <div className="mt-6 space-y-4 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row items-center justify-center w-full">
-          <button onClick={handleForgiveClick} className="bg-[#FBAED2] text-white px-6 py-2 rounded-full shadow-md hover:bg-[#F98FB8] transition transform hover:scale-105 w-full sm:w-auto">
+        <div className="mt-6 w-full grid grid-cols-2 grid-rows-2 gap-2">
+          <button onClick={handleForgiveClick} className="bg-[#FBAED2] text-white p-3 rounded-full shadow-md hover:bg-[#F98FB8] transition transform hover:scale-105 text-sm sm:text-base flex items-center justify-center min-h-[72px]">
             Celebrate 🎉
           </button>
-          <button onClick={handleComplimentClick} className="bg-[#FBAED2] text-white px-6 py-2 rounded-full shadow-md hover:bg-[#F98FB8] transition transform hover:scale-105 w-full sm:w-auto">
+          <button onClick={handleComplimentClick} className="bg-[#FBAED2] text-white p-3 rounded-full shadow-md hover:bg-[#F98FB8] transition transform hover:scale-105 text-sm sm:text-base flex items-center justify-center min-h-[72px]">
             Compliments from Preet 💌
           </button>
-          <button onClick={handleHugClick} className="bg-[#FBAED2] text-white px-6 py-2 rounded-full shadow-md hover:bg-[#F98FB8] transition transform hover:scale-105 w-full sm:w-auto">
+          <button onClick={handleHugClick} className="bg-[#FBAED2] text-white p-3 rounded-full shadow-md hover:bg-[#F98FB8] transition transform hover:scale-105 text-sm sm:text-base flex items-center justify-center min-h-[72px]">
             Hug 🤗
           </button>
-          <button onClick={handleLetsTalkClick} className="bg-[#FBAED2] text-white px-6 py-2 rounded-full shadow-md hover:bg-[#F98FB8] transition transform hover:scale-105 w-full sm:w-auto">
+          <button onClick={handleLetsTalkClick} className="bg-[#FBAED2] text-white p-3 rounded-full shadow-md hover:bg-[#F98FB8] transition transform hover:scale-105 text-sm sm:text-base flex items-center justify-center min-h-[72px]">
             Let's Talk 💬
           </button>
         </div>
       </div>
-
-    
 
       <style>
         {`
