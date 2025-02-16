@@ -24,7 +24,7 @@ Main hamesha intezar karunga, tum palat kar dekhogi kya?
 Jab bhi milogi, sab bhool kar gale lagaogi kya?
 Jaakar bhi ek din wapas aaogi kya?
 Aaogi tab bhi apnaunga tumhe, bas batao... wapas aaogi kya?`,
-`Jab wo gaya, sab kuch chhut gaya, Meri pasand, meri muskurahat, sab kho gaya. Maa ne pehli baar poocha- "Kya hua?" Par main toh khud hi khud se khafa ho gaya.
+`Jab wo gaya, sab kuch chhut gaya, Meri pasand, meri muskurahat, sab kho gaya. Maa ne pehli baar poocha "Kya hua?" Par main toh khud hi khud se khafa ho gaya.
 
 Woh nahi, toh mohabbat bhi nahi, Meri duniya mein ab roshni bhi nahi. Uske bina sab bekaar sa lagta hai, Meri saanson ka bojh bhi ab bhari lagta hai.
 
@@ -33,15 +33,15 @@ Jo khaana kabhi khushi se khaya tha, Aaj woh samne rakha bhi to aansuon se bhara
 Zinda hoon, par sirf naam ke liye, Dil dhadakta hai, bas ek kaam ke liye. Bas ek aur dukh, ek aur gehri chot, Aur phir shayad yeh kahani bhi khatam ho.
 
 Lekin shayad... ek din, kahin, koi raah mil jaaye, Koi wajah ho jeene ki, jo dil ko fir se sulag jaaye. Ho sakta hai dukh kabhi kam na ho, Par shayad tere aane se fir jeena sikhne ka man ho.`,
-`Us din jab tune jaana tha,
+`Us din jab tumhe jaana tha,
 Sab kuch wahi thamm sa gaya tha.
 Zubaan pe kitni baatein thi,
 Par kehne ka hausla kahaan tha?
 
-Meri duniya ka har rang chhin gaya,
-Raaton ka sukoon bhi din gaya.
+Meri duniya ka har rang chin gaya,
+Raaton ka sukoon.
 Jo hasi kabhi teri baaton mein thi,
-Aaj woh aansuon ke saath beh gaya.
+woh aansuon ke saath beh gayi.
 
 Teri yaadon ka ek bhor bacha hai,
 Mere dil ka ab bas shor bacha hai.
@@ -53,10 +53,46 @@ Ek din phir meri aawaz sun aaye tu.
 Par sach yeh hai ki jo chala jata hai,
 Woh sirf yaadon mein hi reh paata hai.
 
-Phir bhi... shayad kahin, kisi mod pe,
-Ek naya subah, ek naya dor mile.
-Dukh kabhi pura khatam na hoga,
-Par shayad ek nayi muskurahat ka zor mile.`,
+Phir bhi... shayad kahin, kisi mod par,
+Ek nayi subah, ek naya manzar mile.
+Dukh shayad hamesha saath chale,
+Magar kabhi beech-beech mein muskurane ka bahaana zarur mile..`,
+`"Tere Jaane Ke Baad"
+
+Tere jaane ke baad sab kuch badal gaya,
+Par log kehte hain ki waqt ke saath sab theek ho jata hai.
+Sach bataun? Kuch bhi theek nahi hota.
+
+Tere bina woh shaam ajeeb lagti hai,
+Jab mai tujhe pick karne aaya karta tha.
+Ab sirf akela baithe sochta hoon
+Wahi jagah, wahi raste, par ab tu nahi hai.
+
+Woh galiyan jahan hum kabhi saath ghoome the,
+Mujhe itna satane lagi ki maine pura sheher hi chhod diya.
+Door chale jaana asaan tha,
+Par woh yaadein... inse bhaagna mushkil.
+
+Hamara woh chup chup ke milna yaad aata hai,
+Jab har baar dar lagta tha kisi ke dekh lene ka.
+Aur jab hum bike par ghoomte the,
+Tu apna sar mere kandhe par rakh deti thi,
+Jaise har ek tension, har fikr uss ek pal ke liye khatam ho gayi ho.
+
+Log kehte hain tu khush hai,
+Par main jaanta hoon, tujhe bhi fark padta hai.
+Bas tu kabhi jataati nahi.
+Main samajh sakta hoon, par kabhi keh nahi sakta.
+
+Kayi baar mann karta hai tujhe sab bata doon,
+Ke jaane ke baad bhi tu har pal mere saath hai.
+Par phir sochta hoon, shayad tu bhi yahi mehsoos karti hai,
+Bas mujhe batati nahi.
+
+Aur agar kabhi kisi raat tujhe bhi yeh dukh mehsoos ho,
+To bas ek baar sochna,
+Ki main ab bhi wahi hoon,
+Bas tere bina thoda adhoora ho gaya hoon.`,
   ];
 
   // Floating hearts configuration
