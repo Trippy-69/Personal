@@ -125,7 +125,7 @@ function App() {
       <div className="bg-white p-6 sm:p-10 rounded-3xl shadow-2xl max-w-xs sm:max-w-md relative z-10 border-4 border-pink-500 transform transition-all hover:scale-105 hover:shadow-pink-600 text-center flex flex-col items-center" style={{ fontFamily: 'Times New Roman, serif' }}>
         <h2 className="text-3xl sm:text-5xl text-pink-600 font-bold leading-tight">In memory of my beloved, Kuchi💖</h2>
         <p className="text-gray-700 mt-4 text-lg sm:text-xl text-justify">
-          I'll always love you but maybe i'll never beg for your love again<br/>
+          I'll always love you a fish and a bird may indeed fall in love, but where shall they live?<br/>
           I don't know where you went without any clue, but I still remember the warmth of your hug. I would have held you till my arms ached but how could I have known it was a farewell? <br/>           Your touch faded, but your warmth still lives in the spaces between my heartbeats<br/>
           <span className="block mt-2 text-center font-semibold text-pink-600">15-May-2021 - 25-Aug-2022</span> 
         </p>
