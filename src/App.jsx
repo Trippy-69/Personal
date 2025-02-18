@@ -1,5 +1,5 @@
-import React, { useState, useRef } from "react";
-import Confetti from 'react-confetti';
+import React, { useState, useRef, useEffect } from "react";
+import Confetti from "react-confetti";
 
 function App() {
   const [showCelebration, setShowCelebration] = useState(false);
@@ -7,8 +7,13 @@ function App() {
   const [compliment, setCompliment] = useState("");
   const [hugMessage, setHugMessage] = useState(false);
   const [showHearts, setShowHearts] = useState(false);
+  const [isSongPlaying, setIsSongPlaying] = useState(false);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [lyrics, setLyrics] = useState([]);
   const audioRef = useRef(null);
+  const surpriseAudioRef = useRef(null);
   const timeoutRef = useRef(null);
+  const intervalRef = useRef(null);
 
   const compliments = [
     "Kuchi, tmpe cat eye frame bohot suit krta h! 💖",
@@ -41,6 +46,13 @@ function App() {
     "Kuchi, you're the best as I always say! 🌹",
     "Kuchi, tum ek poem ho jo bina likhe bhi bohot kuch keh jati ho! ✨",
     "Kuchi, your eyes are like gehra samandar! (dub jau?) 👀",
+  ];
+
+  const songLyrics = [
+    { text: "Aage rahiyo naa piche rahiyo✨", start: 1, end: 5 },
+    { text: "Mera Rahiyo yaar bss mera rahiyo💖", start: 6, end: 10 },
+    { text: "Aage rahiyo naa piche rahiyo✨", start: 11, end: 15 },
+    { text: "Mera Rahiyo yaar bss mera rahiyo💖", start: 16, end: 20 },
   ];
 
   const handleForgiveClick = () => {
@@ -79,8 +91,33 @@ function App() {
     window.open(whatsappUrl, "_blank");
   };
 
+  const handleSurpriseClick = () => {
+    if (surpriseAudioRef.current) {
+      surpriseAudioRef.current.currentTime = 0;
+      surpriseAudioRef.current.play();
+      setIsSongPlaying(true);
+      setLyrics(songLyrics);
+    }
+  };
+
+  const handleAudioEnd = () => {
+    setIsSongPlaying(false);
+    setLyrics([]);
+    setCurrentTime(0);
+    clearInterval(intervalRef.current);
+  };
+
+  useEffect(() => {
+    if (isSongPlaying) {
+      intervalRef.current = setInterval(() => {
+        setCurrentTime(surpriseAudioRef.current?.currentTime || 0);
+      }, 100);
+    }
+    return () => clearInterval(intervalRef.current);
+  }, [isSongPlaying]);
+
   return (
-    <div className="flex items-center justify-center h-screen bg-gradient-to-r from-pink-200 via-pink-300 to-pink-400 text-center relative overflow-hidden p-4 sm:p-8">
+    <div className="flex items-center justify-center h-screen bg-gradient-to-r from-pink-200 via-pink-300 to-pink-400 text-center relative overflow-hidden p-4">
       {showCelebration && <Confetti width={window.innerWidth} height={window.innerHeight} numberOfPieces={400} recycle={false} />}
 
       {showHearts && (
@@ -88,7 +125,7 @@ function App() {
           {[...Array(20)].map((_, i) => (
             <div
               key={i}
-              className="absolute text-5xl sm:text-7xl animate-heart opacity-80"
+              className="absolute text-4xl sm:text-5xl animate-heart opacity-80"
               style={{
                 left: `${Math.random() * 90}%`,
                 top: `${Math.random() * 100}%`,
@@ -103,44 +140,77 @@ function App() {
       )}
 
       <audio ref={audioRef} src="/celebration.mp3" />
+      <audio ref={surpriseAudioRef} src="/suprize.mp3" onEnded={handleAudioEnd} />
 
       {thankYouMessage && (
-        <div className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-white p-4 rounded-lg shadow-lg z-20">
-          <p className="text-pink-600 text-xl font-bold">Smileee💖</p>
+        <div className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-white p-3 rounded-lg shadow-lg z-20">
+          <p className="text-pink-600 text-lg font-bold">Smileee💖</p>
         </div>
       )}
 
       {compliment && (
-        <div className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-white p-4 rounded-lg shadow-lg z-20">
-          <p className="text-pink-600 text-xl font-bold">{compliment}</p>
+        <div className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-white p-3 rounded-lg shadow-lg z-20">
+          <p className="text-pink-600 text-lg font-bold">{compliment}</p>
         </div>
       )}
 
       {hugMessage && (
-        <div className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-white p-4 rounded-lg shadow-lg z-20">
-          <p className="text-pink-600 text-xl font-bold">Virtual hug sent to Preet 💖</p>
+        <div className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-white p-3 rounded-lg shadow-lg z-20">
+          <p className="text-pink-600 text-lg font-bold">Virtual hug sent to Preet 💖</p>
         </div>
       )}
 
-      <div className="bg-white p-6 sm:p-10 rounded-3xl shadow-2xl max-w-xs sm:max-w-md relative z-10 border-4 border-pink-500 transform transition-all hover:scale-105 hover:shadow-pink-600 text-center flex flex-col items-center" style={{ fontFamily: 'Times New Roman, serif' }}>
-        <h2 className="text-3xl sm:text-5xl text-pink-600 font-bold leading-tight">In memory of my beloved, Kuchi💖</h2>
-        <p className="text-gray-700 mt-4 text-lg sm:text-xl text-justify">
+      {isSongPlaying && (
+        <div className="fixed inset-0 backdrop-blur-sm bg-black/30 z-30 flex items-center justify-center">
+          <div className="bg-white/90 p-6 rounded-2xl shadow-xl max-w-md mx-4 relative">
+            <button
+              onClick={handleAudioEnd}
+              className="absolute -top-3 -right-3 bg-pink-500 text-white rounded-full w-8 h-8 flex items-center justify-center shadow-lg hover:bg-pink-600 transition-colors"
+            >
+              ×
+            </button>
+            {songLyrics.map(
+              (line, index) =>
+                currentTime >= line.start &&
+                currentTime <= line.end && (
+                  <p
+                    key={index}
+                    className="text-pink-600 text-xl sm:text-2xl text-center font-bold animate-fade-in"
+                    style={{ fontFamily: 'Times New Roman, serif' }}
+                  >
+                    {line.text}
+                  </p>
+                )
+            )}
+          </div>
+        </div>
+      )}
+
+      <div className="bg-white p-6 rounded-3xl shadow-2xl max-w-[95%] sm:max-w-md relative z-10 border-4 border-pink-500 transform transition-all hover:scale-105 hover:shadow-pink-600 text-center flex flex-col items-center overflow-y-auto max-h-[90vh]" style={{ fontFamily: 'Times New Roman, serif' }}>
+        <h2 className="text-2xl sm:text-4xl text-pink-600 font-bold leading-tight mb-4">
+          In memory of my beloved, Kuchi💖
+        </h2>
+        <p className="text-gray-700 text-base sm:text-lg text-justify mb-4">
           I'll always love you a fish and a bird may indeed fall in love, but where shall they live?<br/>
-          I don't know where you went without any clue, but I still remember the warmth of your hug. I would have held you till my arms ached but how could I have known it was a farewell? <br/>           Your touch faded, but your warmth still lives in the spaces between my heartbeats<br/>
-          <span className="block mt-2 text-center font-semibold text-pink-600">15-May-2021 - 25-Aug-2022</span> 
+          I don't know where you went without any clue, but I still remember the warmth of your hug. I would have held you till my arms ached but how could I have known it was a farewell? <br/>
+          Your touch faded, but your warmth still lives in the spaces between my heartbeats<br/>
+          <span className="block mt-2 text-center font-semibold text-pink-600">15-May-2021 - 25-Aug-2022</span>
         </p>
-        <div className="mt-6 w-full grid grid-cols-2 grid-rows-2 gap-2">
-          <button onClick={handleForgiveClick} className="bg-[#FBAED2] text-white p-3 rounded-full shadow-md hover:bg-[#F98FB8] transition transform hover:scale-105 text-sm sm:text-base flex items-center justify-center min-h-[72px]">
+        <div className="w-full grid grid-cols-2 gap-2">
+          <button onClick={handleForgiveClick} className="bg-[#FBAED2] text-white p-2 sm:p-3 rounded-full shadow-md hover:bg-[#F98FB8] transition transform hover:scale-105 text-xs sm:text-sm flex items-center justify-center h-14">
             Celebrate 🎉
           </button>
-          <button onClick={handleComplimentClick} className="bg-[#FBAED2] text-white p-3 rounded-full shadow-md hover:bg-[#F98FB8] transition transform hover:scale-105 text-sm sm:text-base flex items-center justify-center min-h-[72px]">
+          <button onClick={handleComplimentClick} className="bg-[#FBAED2] text-white p-2 sm:p-3 rounded-full shadow-md hover:bg-[#F98FB8] transition transform hover:scale-105 text-xs sm:text-sm flex items-center justify-center h-14">
             Compliments from Preet 💌
           </button>
-          <button onClick={handleHugClick} className="bg-[#FBAED2] text-white p-3 rounded-full shadow-md hover:bg-[#F98FB8] transition transform hover:scale-105 text-sm sm:text-base flex items-center justify-center min-h-[72px]">
+          <button onClick={handleHugClick} className="bg-[#FBAED2] text-white p-2 sm:p-3 rounded-full shadow-md hover:bg-[#F98FB8] transition transform hover:scale-105 text-xs sm:text-sm flex items-center justify-center h-14">
             Hug 🤗
           </button>
-          <button onClick={handleLetsTalkClick} className="bg-[#FBAED2] text-white p-3 rounded-full shadow-md hover:bg-[#F98FB8] transition transform hover:scale-105 text-sm sm:text-base flex items-center justify-center min-h-[72px]">
+          <button onClick={handleLetsTalkClick} className="bg-[#FBAED2] text-white p-2 sm:p-3 rounded-full shadow-md hover:bg-[#F98FB8] transition transform hover:scale-105 text-xs sm:text-sm flex items-center justify-center h-14">
             Let's Talk 💬
+          </button>
+          <button onClick={handleSurpriseClick} className="bg-[#FBAED2] text-white p-2 sm:p-3 rounded-full shadow-md hover:bg-[#F98FB8] transition transform hover:scale-105 text-xs sm:text-sm flex items-center justify-center h-14">
+            Surprise 🎶
           </button>
         </div>
       </div>
@@ -163,6 +233,14 @@ function App() {
           }
           .animate-heart {
             animation: heart 2s ease-out;
+          }
+
+          @keyframes fade-in {
+            0% { opacity: 0; transform: translateY(10px); }
+            100% { opacity: 1; transform: translateY(0); }
+          }
+          .animate-fade-in {
+            animation: fade-in 0.5s ease-in-out;
           }
         `}
       </style>
