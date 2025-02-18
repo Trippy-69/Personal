@@ -49,9 +49,9 @@ function App() {
   ];
 
   const songLyrics = [
-    { text: "Aage rahiyo naa piche rahiyo✨", start: 0.5, end: 4 },
-    { text: "Mera Rahiyo yaar bss mera rahiyo💖", start: 5, end: 9 },
-    { text: "Aage rahiyo naa piche rahiyo✨", start: 10, end: 14 },
+    { text: "Aage rahiyo naa piche rahiyo✨", start: 0.5, end: 4.5 },
+    { text: "Mera Rahiyo yaar bss mera rahiyo💖", start: 5, end: 9.5 },
+    { text: "Aage rahiyo naa piche rahiyo✨", start: 10, end: 14.5 },
     { text: "Mera Rahiyo yaar bss mera rahiyo💖", start: 15, end: 20 },
   ];
 
