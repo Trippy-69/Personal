@@ -49,10 +49,10 @@ function App() {
   ];
 
   const songLyrics = [
-    { text: "Aage rahiyo naa piche rahiyo✨", start: 1, end: 5 },
-    { text: "Mera Rahiyo yaar bss mera rahiyo💖", start: 6, end: 10 },
-    { text: "Aage rahiyo naa piche rahiyo✨", start: 11, end: 15 },
-    { text: "Mera Rahiyo yaar bss mera rahiyo💖", start: 16, end: 20 },
+    { text: "Aage rahiyo naa piche rahiyo✨", start: 0.5, end: 4 },
+    { text: "Mera Rahiyo yaar bss mera rahiyo💖", start: 5, end: 9 },
+    { text: "Aage rahiyo naa piche rahiyo✨", start: 10, end: 14 },
+    { text: "Mera Rahiyo yaar bss mera rahiyo💖", start: 15, end: 20 },
   ];
 
   const handleForgiveClick = () => {
@@ -105,6 +105,10 @@ function App() {
     setLyrics([]);
     setCurrentTime(0);
     clearInterval(intervalRef.current);
+    if (surpriseAudioRef.current) {
+      surpriseAudioRef.current.pause();
+      surpriseAudioRef.current.currentTime = 0;
+    }
   };
 
   useEffect(() => {
@@ -162,26 +166,28 @@ function App() {
 
       {isSongPlaying && (
         <div className="fixed inset-0 backdrop-blur-sm bg-black/30 z-30 flex items-center justify-center">
-          <div className="bg-white/90 p-6 rounded-2xl shadow-xl max-w-md mx-4 relative">
+          <div className="bg-white/90 p-6 rounded-2xl shadow-xl w-[90%] sm:w-[400px] mx-4 relative transition-all duration-200">
             <button
               onClick={handleAudioEnd}
               className="absolute -top-3 -right-3 bg-pink-500 text-white rounded-full w-8 h-8 flex items-center justify-center shadow-lg hover:bg-pink-600 transition-colors"
             >
               ×
             </button>
-            {songLyrics.map(
-              (line, index) =>
-                currentTime >= line.start &&
-                currentTime <= line.end && (
-                  <p
-                    key={index}
-                    className="text-pink-600 text-xl sm:text-2xl text-center font-bold animate-fade-in"
-                    style={{ fontFamily: 'Times New Roman, serif' }}
-                  >
-                    {line.text}
-                  </p>
-                )
-            )}
+            <div className="min-h-[100px] flex items-center justify-center">
+              {songLyrics.map(
+                (line, index) =>
+                  currentTime >= line.start &&
+                  currentTime <= line.end && (
+                    <p
+                      key={index}
+                      className="text-pink-600 text-xl sm:text-2xl text-center font-bold animate-fade-in"
+                      style={{ fontFamily: 'Times New Roman, serif' }}
+                    >
+                      {line.text}
+                    </p>
+                  )
+              )}
+            </div>
           </div>
         </div>
       )}
@@ -209,8 +215,8 @@ function App() {
           <button onClick={handleLetsTalkClick} className="bg-[#FBAED2] text-white p-2 sm:p-3 rounded-full shadow-md hover:bg-[#F98FB8] transition transform hover:scale-105 text-xs sm:text-sm flex items-center justify-center h-14">
             Let's Talk 💬
           </button>
-          <button onClick={handleSurpriseClick} className="bg-[#FBAED2] text-white p-2 sm:p-3 rounded-full shadow-md hover:bg-[#F98FB8] transition transform hover:scale-105 text-xs sm:text-sm flex items-center justify-center h-14">
-            Surprise 🎶
+          <button onClick={handleSurpriseClick} className="col-span-2 bg-[#FBAED2] text-white p-2 sm:p-3 rounded-full shadow-md hover:bg-[#F98FB8] transition transform hover:scale-105 text-xs sm:text-sm flex items-center justify-center h-14">
+            Surprise
           </button>
         </div>
       </div>
@@ -240,7 +246,7 @@ function App() {
             100% { opacity: 1; transform: translateY(0); }
           }
           .animate-fade-in {
-            animation: fade-in 0.5s ease-in-out;
+            animation: fade-in 0.3s ease-in-out;
           }
         `}
       </style>
