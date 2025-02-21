@@ -181,7 +181,7 @@ function App() {
                     <p
                       key={index}
                       className="text-pink-600 text-xl sm:text-2xl text-center font-bold animate-fade-in"
-                      style={{ fontFamily: 'Times New Roman, serif' }}
+                      style={{ fontFamily: "Times New Roman, serif" }}
                     >
                       {line.text}
                     </p>
@@ -192,30 +192,48 @@ function App() {
         </div>
       )}
 
-      <div className="bg-white p-6 rounded-3xl shadow-2xl max-w-[95%] sm:max-w-md relative z-10 border-4 border-pink-500 transform transition-all hover:scale-105 hover:shadow-pink-600 text-center flex flex-col items-center overflow-y-auto max-h-[90vh]" style={{ fontFamily: 'Times New Roman, serif' }}>
-        <h2 className="text-2xl sm:text-4xl text-pink-600 font-bold leading-tight mb-4">
+      <div
+        className="bg-white p-6 rounded-3xl shadow-2xl max-w-[95%] sm:max-w-md relative z-10 border-4 border-pink-500 transform transition-all hover:scale-105 hover:shadow-pink-600 text-center flex flex-col items-center overflow-y-auto max-h-[90vh]"
+        style={{ fontFamily: "Times New Roman, serif" }}
+      >
+        <h2 className="text-3xl sm:text-4xl text-pink-600 font-bold leading-tight mb-4">
           In memory of my beloved, Kuchi💖
         </h2>
         <p className="text-gray-700 text-base sm:text-lg text-justify mb-4">
-          I'll always love you a fish and a bird may indeed fall in love, but where shall they live?<br/>
-          I don't know where you went without any clue, but I still remember the warmth of your hug. I would have held you till my arms ached but how could I have known it was a farewell? <br/>
-          Your touch faded, but your warmth still lives in the spaces between my heartbeats<br/>
+          I'll always love you a fish and a bird may indeed fall in love, but where shall they live?<br />
+          I don't know where you went without any clue, but I still remember the warmth of your hug. I would have held you till my arms ached but how could I have known it was a farewell? <br />
+          Your touch faded, but your warmth still lives in the spaces between my heartbeats<br />
           <span className="block mt-2 text-center font-semibold text-pink-600">15-May-2021 - 25-Aug-2022</span>
         </p>
         <div className="w-full grid grid-cols-2 gap-2">
-          <button onClick={handleForgiveClick} className="bg-[#FBAED2] text-white p-2 sm:p-3 rounded-full shadow-md hover:bg-[#F98FB8] transition transform hover:scale-105 text-xs sm:text-sm flex items-center justify-center h-14">
+          <button
+            onClick={handleForgiveClick}
+            className="bg-[#FBAED2] text-white p-2 sm:p-3 rounded-full shadow-md hover:bg-[#F98FB8] transition transform hover:scale-105 text-xs sm:text-sm flex items-center justify-center h-14"
+          >
             Celebrate 🎉
           </button>
-          <button onClick={handleComplimentClick} className="bg-[#FBAED2] text-white p-2 sm:p-3 rounded-full shadow-md hover:bg-[#F98FB8] transition transform hover:scale-105 text-xs sm:text-sm flex items-center justify-center h-14">
+          <button
+            onClick={handleComplimentClick}
+            className="bg-[#FBAED2] text-white p-2 sm:p-3 rounded-full shadow-md hover:bg-[#F98FB8] transition transform hover:scale-105 text-xs sm:text-sm flex items-center justify-center h-14"
+          >
             Compliments from Preet 💌
           </button>
-          <button onClick={handleHugClick} className="bg-[#FBAED2] text-white p-2 sm:p-3 rounded-full shadow-md hover:bg-[#F98FB8] transition transform hover:scale-105 text-xs sm:text-sm flex items-center justify-center h-14">
+          <button
+            onClick={handleHugClick}
+            className="bg-[#FBAED2] text-white p-2 sm:p-3 rounded-full shadow-md hover:bg-[#F98FB8] transition transform hover:scale-105 text-xs sm:text-sm flex items-center justify-center h-14"
+          >
             Hug 🤗
           </button>
-          <button onClick={handleLetsTalkClick} className="bg-[#FBAED2] text-white p-2 sm:p-3 rounded-full shadow-md hover:bg-[#F98FB8] transition transform hover:scale-105 text-xs sm:text-sm flex items-center justify-center h-14">
+          <button
+            onClick={handleLetsTalkClick}
+            className="bg-[#FBAED2] text-white p-2 sm:p-3 rounded-full shadow-md hover:bg-[#F98FB8] transition transform hover:scale-105 text-xs sm:text-sm flex items-center justify-center h-14"
+          >
             Let's Talk 💬
           </button>
-          <button onClick={handleSurpriseClick} className="col-span-2 bg-[#FBAED2] text-white p-2 sm:p-3 rounded-full shadow-md hover:bg-[#F98FB8] transition transform hover:scale-105 text-xs sm:text-sm flex items-center justify-center h-14">
+          <button
+            onClick={handleSurpriseClick}
+            className="col-span-2 bg-[#FBAED2] text-white p-2 sm:p-3 rounded-full shadow-md hover:bg-[#F98FB8] transition transform hover:scale-105 text-xs sm:text-sm flex items-center justify-center h-14"
+          >
             Surprise
           </button>
         </div>
